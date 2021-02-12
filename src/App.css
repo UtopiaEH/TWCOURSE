@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+
+.buttonRed {
+  background: red;
+  cursor: pointer;
+}
+
+.buttonBlue {
+  background: blue;
+  cursor: pointer;
+}
