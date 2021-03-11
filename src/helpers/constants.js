@@ -1,23 +1,28 @@
 import { CloudOutlined, UserOutlined, VideoCameraOutlined } from "@ant-design/icons";
 
+export const HOME_PATH = '/'
+export const NEWS_PATH = '/news'
+export const ABOUT_PATH = '/about-us'
+
+
 export const MenuRoot = [
     {
         id: 0,
         name: "Home",
         icon: <UserOutlined/>,
-        path: '/'
+        path: HOME_PATH
     },
     {
         id: 1,
         name: "News",
         icon: <VideoCameraOutlined/>,
-        path: '/news'
+        path: NEWS_PATH
     },
     {
         id: 2,
         name: "About US",
         icon: <CloudOutlined/>,
-        path: '/about-us'
+        path: ABOUT_PATH
     },
 
 ]
