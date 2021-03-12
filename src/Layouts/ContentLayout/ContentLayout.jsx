@@ -10,16 +10,14 @@ const { Content } = Layout
 
 export const ContentLayout = observer(() => {
 
-    const { setInitialState, content$ } = useRootStore()
-
-    useEffect(() => {
-        setInitialState()
-    }, [])
-
+    const { content$, contentSum } = useRootStore()
 
     return (
         <Content>
+
             <div className="content" style={ { padding: 24, textAlign: 'center' } }>
+                { contentSum }
+
                 { !content$.length ? (
                     <div>No Content</div>
                 ) : (
@@ -39,3 +37,4 @@ export const ContentLayout = observer(() => {
         </Content>
     )
 })
+

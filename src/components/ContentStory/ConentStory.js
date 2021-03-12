@@ -1,18 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import { Card, message } from 'antd'
-// import { removeCard } from "../../helpers/functions";
-import { useRootStore } from "../../mobx/ProviderRootStore";
+import { Card } from 'antd'
+import React from 'react'
 
 const { Meta } = Card;
 
 export const ContentStory = ({ img, title, description, removeCard, id, }) => {
-    // const [ removeElement, setRemoveElement ] = useState([])
 
-    // useEffect(() => {
-    //     if (!!removeElement.length) {
-    //         message.success(removeElement.title);
-    //     }
-    // })
     return (
         <Card
             hoverable
@@ -20,9 +12,6 @@ export const ContentStory = ({ img, title, description, removeCard, id, }) => {
             cover={ <img alt="example" src={ img }/> }
             onClick={ () => {
                 removeCard(id)
-                // const [ removed, state ] = removeCard(content$, index)
-                // setRemoveElement(removed)
-                // setInitialState([ ...state ])
 
             } }
         >

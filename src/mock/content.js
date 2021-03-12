@@ -59,3 +59,33 @@ export const contentMock = [
 
 
 ]
+
+export const newsMockData = [
+
+    {
+        id: uuid(),
+        title: 'News 1',
+        description: 'lorem',
+        img: 'https://wallpapercave.com/wp/wp7782554.jpg'
+    },
+    {
+        id: uuid(),
+        title: 'News 2',
+        description: 'lorem',
+        img: 'https://wallpapercave.com/wp/wp7782554.jpg'
+    },
+    {
+        id: uuid(),
+        title: 'News 3',
+        description: 'lorem',
+        img: 'https://wallpapercave.com/wp/wp7782554.jpg'
+    },
+    {
+        id: uuid(),
+        title: 'News 4',
+        description: 'lorem',
+        img: 'https://wallpapercave.com/wp/wp7782554.jpg'
+    },
+
+
+]

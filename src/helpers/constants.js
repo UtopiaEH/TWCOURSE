@@ -3,6 +3,7 @@ import { CloudOutlined, UserOutlined, VideoCameraOutlined } from "@ant-design/ic
 export const HOME_PATH = '/'
 export const NEWS_PATH = '/news'
 export const ABOUT_PATH = '/about-us'
+export const ADD_CONTENT = '/add-content'
 
 
 export const MenuRoot = [
@@ -23,6 +24,12 @@ export const MenuRoot = [
         name: "About US",
         icon: <CloudOutlined/>,
         path: ABOUT_PATH
+    },
+    {
+        id: 3,
+        name: "Add Content",
+        icon: <CloudOutlined/>,
+        path: ADD_CONTENT
     },
 
 ]
