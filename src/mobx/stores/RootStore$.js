@@ -1,4 +1,5 @@
 import { notification } from 'antd'
+import axios from 'axios'
 import { flow } from 'mobx'
 import { types } from 'mobx-state-tree'
 import { AddContent } from '../models/AddContentModel.model'
@@ -33,6 +34,7 @@ export const RootStore$ = types.model('RootStore$', {
         },
 
         setInitialState() {
+            self.fetchImagesFromAPICats()
             self.content$ = contentMock
             self.news$ = newsMockData
         },
@@ -70,14 +72,28 @@ export const RootStore$ = types.model('RootStore$', {
         })
 
     }))
+    .actions((self) => ({
+        fetchImagesFromAPICats: flow(function* () {
+            const res = yield axios.get('https://api.thecatapi.com/v1/images/search', {
+                headers: {
+                   'x-api-key': '10eb1b55-1806-4da6-b9f8-806b2df13b95'
+                },
+                params: {
+                    limit: 1,
+                    size: 'full'
+                },
+            })
 
-    .views((self) => ({
-        get contentSum() {
-            return self.content$.length
-        },
-
-        get defaultAddType() {
-            return self.default_add_type === 'news' ? true : false
-        }
+            console.log('>>res', res)
+        })
     }))
+        .views((self) => ({
+            get contentSum() {
+                return self.content$.length
+            },
+
+            get defaultAddType() {
+                return self.default_add_type === 'news' ? true : false
+            }
+        }))
 
