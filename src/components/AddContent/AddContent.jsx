@@ -5,10 +5,10 @@ import { observer } from 'mobx-react-lite'
 
 export const AddContent = observer(() => {
 
-    const { defaultAddType, addContent, addContent$, setAddContntInitial, setUpdateType } = useRootStore()
+    const { defaultAddType, addContent, addContent$,setAddContentInitial, setUpdateType } = useRootStore()
 
     useEffect(() => {
-        setAddContntInitial()
+        setAddContentInitial()
     }, [])
 
     if (!addContent$) return ''
