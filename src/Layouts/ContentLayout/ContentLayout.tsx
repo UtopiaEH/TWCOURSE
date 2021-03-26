@@ -9,11 +9,11 @@ import { useRootStore } from '../../mobx/ProviderRootStore'
 const { Content } = Layout
 
 export const ContentLayout = observer(() => {
-    const { content$, showMessage } = useRootStore()
-
-    useEffect(() => {
-        showMessage()
-    }, [])
+    const { content$ } = useRootStore()
+    //
+    // useEffect(() => {
+    //     showMessage()
+    // }, [])
     return (
         <Content>
 

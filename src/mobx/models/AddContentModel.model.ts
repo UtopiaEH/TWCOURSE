@@ -1,4 +1,4 @@
-import { types } from "mobx-state-tree";
+import { types } from 'mobx-state-tree'
 
 
 export const AddContent = types.model('AddContent', {
@@ -8,7 +8,7 @@ export const AddContent = types.model('AddContent', {
 })
 
     .actions((self) => ({
-        updateField(key, value) {
+        updateField<key extends keyof typeof self>(key: key, value: typeof self[key]) {
             self[key] = value
         }
     }))

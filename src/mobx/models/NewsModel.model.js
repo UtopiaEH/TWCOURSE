@@ -1,5 +1,5 @@
 import { getParentOfType, types } from 'mobx-state-tree'
-import { RootStore$ } from "../stores/RootStore$";
+import { RootStore$ } from "../stores/RootStore$.store";
 
 export const NewsModel = types.model('NewsModel', {
     id: types.identifier,

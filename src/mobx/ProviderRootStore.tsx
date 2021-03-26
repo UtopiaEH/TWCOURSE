@@ -1,6 +1,6 @@
 import React from 'react'
 import { IRoot$ } from './interfaces'
-import { RootStore$ } from './stores/RootStore$'
+import { RootStore$ } from './stores/RootStore$.store'
 
 const MainStore = RootStore$.create({})
 
