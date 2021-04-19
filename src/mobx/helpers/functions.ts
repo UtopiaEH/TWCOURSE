@@ -1,4 +1,4 @@
-import { IRequestData, ISnapshotContentModelIn } from '../interfaces'
+import { IRequestData, ISnapshotContentGoogleModelIn, ISnapshotContentModelIn } from '../interfaces'
 
 export function makeSnapshotIn(res: IRequestData[]): ISnapshotContentModelIn[] {
 
@@ -8,6 +8,19 @@ export function makeSnapshotIn(res: IRequestData[]): ISnapshotContentModelIn[] {
             title: '',
             description: '',
             img: data.url
+        }
+    })
+
+}
+
+
+export function makeSnapshotInFromGoogle(res: any): ISnapshotContentGoogleModelIn[] {
+
+    return res.data.results.map((res: ISnapshotContentGoogleModelIn) => {
+        return {
+            description: res.description,
+            link: res.link,
+            title: res.title
         }
     })
 

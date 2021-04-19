@@ -31,12 +31,12 @@
 // promise.then((value) => console.log(value))
 // promise.catch((value) => console.log(value))
 
-async function promisse() {
-    await setTimeout(() => {
-        console.log('test')
-    }, 5000)
-
-    console.log(1)
-}
-promisse()
+// async function promisse() {
+//     const res = await setTimeout(() => {
+//         console.log('test')
+//     }, 5000)
+//
+//     console.log(res)
+// }
+// promisse()
 // promisse.then((value) => console.log(value))
